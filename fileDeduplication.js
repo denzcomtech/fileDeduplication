@@ -14,7 +14,7 @@ var currentDirArgs = process.argv[3];
 var delArgs = process.argv[4];
 var stat = "recursively";
 
-process.stdout.write("\u001b[2J\u001b[0;0H");
+// process.stdout.write("\u001b[2J\u001b[0;0H");
 if (fs.existsSync(pathArgs)) {
 	// console.log(hash('/Users/dennis/tmp/tess ts.sh'));
 	recursive(pathArgs, function (err, files) {
