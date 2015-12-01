@@ -14,6 +14,8 @@ var currentDirArgs = process.argv[3];
 var delArgs = process.argv[4];
 var stat = "recursively";
 
+pathArgs = pathArgs + "/";
+pathArgs = pathArgs.replace(/\/+/g,'/');
 // process.stdout.write("\u001b[2J\u001b[0;0H");
 if (fs.existsSync(pathArgs)) {
 	// console.log(hash('/Users/dennis/tmp/tess ts.sh'));
@@ -23,8 +25,8 @@ if (fs.existsSync(pathArgs)) {
 	  	var files = [];
 	  	var dd = fs.readdirSync(pathArgs);
 		dd.forEach(function(d) {
-			if (!fs.statSync(pathArgs+"/"+d).isDirectory()) {
-				files.push(pathArgs+"/"+d);
+			if (!fs.statSync(pathArgs+d).isDirectory()) {
+				files.push(pathArgs+d);
 				// console.log(pathArgs+"/"+d);
 			}
 		});
