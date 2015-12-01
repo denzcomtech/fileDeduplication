@@ -1,0 +1,23 @@
+{
+  "name": "filededuplication",
+  "version": "1.0.0",
+  "description": "for deletion of duplicated files",
+  "main": "fileDeduplication.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denzcomtech/fileDeduplication.git"
+  },
+  "keywords": [
+    "duplicate",
+    "files"
+  ],
+  "author": "Dennis Sarmiento Ronquillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denzcomtech/fileDeduplication/issues"
+  },
+  "homepage": "https://github.com/denzcomtech/fileDeduplication#readme"
+}
