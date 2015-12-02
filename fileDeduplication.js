@@ -4,6 +4,7 @@
 
 var crypto = require('crypto');
 var fs = require('fs-extra');
+var hash = require("./myNPM/createHash.js");
 var recursive = require('recursive-readdir');
 var clc = require('cli-color');
 var hashArray = [];
@@ -62,27 +63,4 @@ if (fs.existsSync(pathArgs)) {
 	  }
 	});
 
-}
-
-function hash(file, cback) {
-  var checksum = crypto.createHash('md5');
-  if (cback && typeof cback === 'function') {
-    var stream = fs.createReadStream(file);
-    stream.on('error', function (error) {
-      return cback(error, null);
-    });
-    stream.on('data', function (data) {
-      try {
-        checksum.update(data);
-      } catch (ex) {
-        return cback(ex, null);
-      }
-    });
-    stream.on('end', function () {
-      return cback(null, checksum.digest('hex'));
-    });
-  } else {
-    checksum.update(fs.readFileSync(file));
-    return checksum.digest('hex');
-  }
 }
