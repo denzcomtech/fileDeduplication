@@ -4,7 +4,7 @@
 
 var crypto = require('crypto');
 var fs = require('fs-extra');
-var hash = require("./myNPM/createHash.js");
+var hash = require("./createHash.js");
 var recursive = require('recursive-readdir');
 var clc = require('cli-color');
 var hashArray = [];
